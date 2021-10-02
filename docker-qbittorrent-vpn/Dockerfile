@@ -2,7 +2,7 @@
 #
 # Version 1.8
 
-FROM ubuntu:18.04
+FROM ubuntu:20.04
 MAINTAINER MarkusMcNugen
 
 VOLUME /downloads
@@ -18,7 +18,7 @@ RUN apt-get update \
     && apt-get install -y software-properties-common \
     && add-apt-repository ppa:qbittorrent-team/qbittorrent-stable \
     && apt-get update \
-    && apt-get install -y qbittorrent-nox openvpn curl moreutils net-tools dos2unix kmod iptables ipcalc unrar \
+    && apt-get install -y qbittorrent-nox openvpn curl moreutils net-tools dos2unix kmod iptables ipcalc unrar wget \
     && apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 # Add configuration and scripts
